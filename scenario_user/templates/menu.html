@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите запрос</title>
+</head>
+<style>
+    .text-style{
+        text-align: center;
+    }
+</style>
+<body class="text-style">
+<font size="7" face="Times New Roman">Выберите запрос</font>
+<h1>
+    <ul>
+        <li><a href="{{url_for('user_app.user_sql1')}}">  Отчет об оплате заказа</a></li>
+        <li><a href="{{url_for('user_app.user_sql2')}}"> Общая сумма оплаты покупателя</a></li>
+        <li><a href="{{url_for('user_app.user_sql3')}}"> Все сведения о самом дорогом заказе </a></li>
+    </ul>
+    <br>
+    <h2><a href="{{url_for('index')}}"> Вернуться назад</a></h2>
+
+</h1>
+</body>
+</html>

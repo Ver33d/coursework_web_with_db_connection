@@ -1,0 +1,1 @@
+insert into orders (cipher_buyer , date_order, status_oreder, id_web_order) values($s_id,'$date',1,$basket_id)

@@ -1,0 +1,1 @@
+select idexternal_users,name from external_users

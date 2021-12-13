@@ -1,0 +1,1 @@
+insert into liness (payment_amount, date_payment,order_id) values($price,'$date',$order_id)

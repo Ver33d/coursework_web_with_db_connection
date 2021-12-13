@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask course</title>
+    <style>
+        .main-table{
+            border: 5px solid black;
+            padding: 10px 15px;
+        }
+
+        .text-style{
+            text-align: center;
+        }
+         .main-table-cell {
+        border: 2px solid #02585f;
+        padding: 5px 10px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<div class="text-style">
+<font size="6" face="Times New Roman">Отчет об оплате заказа</font>
+<div class="">
+<br>
+     <table class="main-table test-style" style="display: inline-block;">
+         <thead>
+            <tr class="success">
+                {% for i in name%}
+            <th class="text-center">{{i}}</th>
+                {% endfor %}
+            </tr>
+         </thead>
+
+        <tbody>
+            {% for item in res%}
+            <tr>
+            {% for key, value in item.items() %}
+             <td class="main-table-cell"> {{value}} </td>
+            {% endfor %}
+             </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+
+</div>
+    <br>
+    <h3>
+        <a href="{{url_for('user_app.user_sql1')}}"> Вернуться назад</a>
+    </h3>
+</div>
+</body>
+</html>

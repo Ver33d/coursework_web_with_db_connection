@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask course</title>
+</head>
+<style>
+    .text-style{
+        text-align: center;
+    }
+</style>
+<body class="text-style">
+<font size="6" face="Times New Roman">Введите год, по которому нужна информация</font>
+
+<form action="" method="post">
+    <br>
+    <input type="text" placeholder="Год" name="value">
+    <input type="submit" value="Отправить">
+    <br>
+    <br>
+    <h3><a href="{{url_for('user_app.user_index')}}"> Вернуться назад</a></h3>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "admin": ["auth", "user_sql2", "user_sql1", "user_sql3","buy_basket_handler","suppliers_list"],
+  "typical": ["auth", "suppliers_list"],
+  "first": ["auth", "user_sql2", "buy_basket_handler","suppliers_list"],
+  "second": ["auth", "user_sql1", "suppliers_list"],
+  "unauthorized": [""]
+}

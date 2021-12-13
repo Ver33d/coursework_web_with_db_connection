@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<style>
+        body{
+            background-color: azure;
+        }
+
+        table{
+            background-color: #FFCF73;
+        }
+
+        button{
+            background-color: #FFCF73;
+        }
+
+        .text-style{
+            text-align: center;
+            width: 50%;
+            margin: 0 auto !important;
+        }
+        .heading{
+            display: block;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .usual{
+            font-size: 25px;
+        }
+
+
+        .b1 {
+            background: #FFCF73;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <span class="heading"><font face="Times New Roman" color="#090974">Список заказчиков</font></span>
+            {% if items %}
+            {% for item in items %}
+                <span><strong>Пользователь:</strong>{{ item['idexternal_users']}} - {{ item['name']}}</span>
+            <div>
+                <form action="" method="post">
+                <input type="hidden" name="s_id" value="{{item['idexternal_users']}}">
+                <input type="submit" class="b1"  value="Выбрать">
+            </form>
+            </div>
+            {% endfor %}
+            {% else %}
+            <span class="heading"><font face="Times New Roman" color="#090974">Нет доступных поставщиков</font></span>
+            {% endif %}
+        </div>
+    </div>
+     <a href="{{url_for('index')}}"> Вернуться назад</a>
+</div>
+
+</body>
+</html>

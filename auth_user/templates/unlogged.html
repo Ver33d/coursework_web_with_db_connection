@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .root {
+            display: flex;
+            justify-content: center;
+            color: #02585f;
+        }
+        .wrapper {
+            box-shadow: 3px 3px 3px 2px white;
+            padding: 20px;
+        }
+        .link-wrapper {
+            text-align: center;
+        }
+        .menu-link:visited {
+            color: #02585f;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="root">
+      <div class="wrapper">
+          <div class="info">Вы ввели неверный логин или пароль</div>
+           <center><a href="/auth/login" class="menu-link">Авторизоваться снова</a></center>
+        <center><a href="{{url_for('index')}}" class="menu-link">Вернуться в главное меню</a></center>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/basket">В корзину</a>
+<div> Ваш заказ:
+
+    <table border="1" width="40%" cellpadding="5">
+         <thead>
+            <tr class="success">
+                {% for i in name%}
+                    <th class="text-center">{{i}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+    {% for item in items %}
+    <tr>
+        {% for key, values in item.items() %}
+            <td>{{values}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+</body>
+</html>
