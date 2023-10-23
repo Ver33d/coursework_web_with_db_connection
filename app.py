@@ -27,7 +27,6 @@ app.config['SECRET_KEY'] = 'my_secret_key'
 @app.route('/')
 
 def index():
-
 # Обработик главного меню
     return render_template('main.html')
 
